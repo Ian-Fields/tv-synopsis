@@ -1,0 +1,20 @@
+html
+  head
+    link(rel="stylesheet" href="/css/styles.css")
+  body
+    h1 Kim's Convenience
+    h2 Developed By
+    ul
+      for producers in showdata.developedBy
+        li= producers
+    
+    h2 Starring
+    ul
+      for stars in showdata.starring
+        li= stars
+    
+    h2 Seasons
+    ul
+      for season in showdata.seasons
+        li
+          a(href=`/season/${season.number}`)= `Season ${season.number}`
